@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Manrope:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Cormorant Garamond", ui-serif, Georgia, serif;
+  --color-ivory: oklch(98.2% 0.004 85);
+  --color-ink: oklch(22% 0.004 100);
+  --color-espresso: oklch(31% 0.022 55);
+  --color-sand: oklch(91.2% 0.016 75);
+  --color-olive: oklch(52% 0.04 125);
+  --color-olive-foreground: oklch(98.2% 0.004 85);
+  --color-background: oklch(98.2% 0.004 85);
+  --color-foreground: oklch(22% 0.004 100);
+  --color-primary: oklch(31% 0.022 55);
+  --color-primary-foreground: oklch(98.2% 0.004 85);
+  --color-secondary: oklch(91.2% 0.016 75);
+  --color-secondary-foreground: oklch(31% 0.022 55);
+  --color-muted: oklch(94.5% 0.01 80);
+  --color-muted-foreground: oklch(48% 0.015 60);
+  --color-accent: oklch(52% 0.04 125);
+  --color-accent-foreground: oklch(98.2% 0.004 85);
+  --color-border: oklch(87% 0.015 75);
+  --radius-sm: 0.125rem;
+}
+
+:root {
+  --ivory: oklch(98.2% 0.004 85);
+  --ink: oklch(22% 0.004 100);
+  --espresso: oklch(31% 0.022 55);
+  --sand: oklch(91.2% 0.016 75);
+  --olive: oklch(52% 0.04 125);
+  --olive-foreground: oklch(98.2% 0.004 85);
+  --overlay-hero: linear-gradient(180deg, oklch(22% 0.004 100 / 0.45) 0%, oklch(22% 0.004 100 / 0.15) 40%, oklch(22% 0.004 100 / 0.6) 100%);
+}
+
+html, body, #root { min-height: 100%; }
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: var(--ivory);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display { font-family: var(--font-display); }
+.bg-hero-overlay { background: var(--overlay-hero); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
